@@ -43,7 +43,7 @@ input[type="number"] {
   padding: 0 16px;
 }
 
-.header {
+.headerWrapper {
   margin-top: 50px;
 }
 
@@ -110,9 +110,63 @@ h1 {
   border-radius: 5px;
   outline: none;
   box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .exchangeBtn:active {
   background-color: #82ad84;
   transition: all 0.4s;
+}
+
+.changeIcon {
+  height: 55%;
+  margin-right: 5px;
+}
+
+.logo {
+  height: 30px;
+  margin-right: 10px;
+}
+
+.disabled {
+  pointer-events: none;
+  color: #8b9194;
+}
+
+@media (max-width: 600px) {
+  .main {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    border-radius: 0;
+  }
+  .App {
+    height: 100%;
+    width: 100%;
+  }
+  .card {
+    min-height: 90px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .exchangeBtn {
+    height: 45px;
+    width: 130px;
+  }
+  .header {
+    font-size: 22px;
+  }
+  .logo {
+    height: 40px;
+  }
+  .dropdown {
+    font-size: 18px;
+  }
+  .currencyLogo,
+  .currencyInput {
+    font-size: 24px;
+  }
 }

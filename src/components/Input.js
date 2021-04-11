@@ -1,12 +1,9 @@
-export const Input = ({ onChange, inputValue }) => {
+export const Input = ({ onChange, inputValue, disabled = false }) => {
   return (
     <input
-      type="number"
-      className="currencyInput"
+      className={`currencyInput ${disabled && "disabled"}`}
       value={inputValue}
       onChange={onChange}
-    >
-      {inputValue}
-    </input>
+    ></input>
   );
 };

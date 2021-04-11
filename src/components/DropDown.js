@@ -1,10 +1,10 @@
 import { countries } from "../data/countries";
 const keys = Object.keys(countries);
-export const DropDown = ({ onSelectChange, selectValue }) => {
+export const DropDown = ({ onSelectChange, selectValue, isMain }) => {
   return (
     <select
       className="dropdown"
-      onChange={(e) => onSelectChange(e, countries[e.target.value])}
+      onChange={(e) => onSelectChange(e, isMain)}
       value={selectValue}
     >
       {keys.length > 0 &&
