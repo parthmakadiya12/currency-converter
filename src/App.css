@@ -2,6 +2,18 @@
 * {
   font-family: "Noto Sans", serif;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
 #root {
   display: flex;
   justify-content: center;
@@ -25,15 +37,82 @@
   width: 100%;
   border-radius: 5%;
   background-color: #83bb83;
-  color: #2f2e23;
+  color: #39254c;
   z-index: 1;
   margin: 10px;
   padding: 0 16px;
 }
 
 .header {
+  margin-top: 50px;
 }
 
 h1 {
   font-size: 22px;
+}
+.flx-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flx-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  padding: 12px;
+  border-radius: 7px;
+  background-color: #9fcea0;
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+  margin-top: 15px;
+}
+
+.dropdown {
+  background: transparent;
+  border: none;
+  width: 100%;
+  outline: none;
+  color: #39264c;
+  font-size: 16px;
+}
+
+.currencyInput {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #39264c;
+  height: 35px;
+  width: 96%;
+  font-size: 22px;
+  outline: none;
+  color: #39264c;
+}
+
+.currencyLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  color: #39264c;
+}
+
+.exchangeBtn {
+  margin-top: 20px;
+  width: 100px;
+  height: 30px;
+  border: none;
+  background-color: #9ecea0;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+}
+
+.exchangeBtn:active {
+  background-color: #82ad84;
+  transition: all 0.4s;
 }
