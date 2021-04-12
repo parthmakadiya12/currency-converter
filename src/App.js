@@ -20,7 +20,7 @@ function App({
   const isMain = true;
   useEffect(() => {
     getRates();
-  });
+  }, []);
   const onSelectChange = (e, isMain) => {
     if (isMain) {
       updateFromCountry(e.target.value);
