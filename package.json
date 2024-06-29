@@ -17,8 +17,8 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "REACT_APP_API_SERVER='https://resume-builder-gatsby.herokuapp.com/' react-scripts start",
-    "build": "REACT_APP_API_SERVER='https://resume-builder-gatsby.herokuapp.com/' react-scripts build",
+    "start": "REACT_APP_API_SERVER='https://www.api.parthmakadiya.com/' react-scripts start",
+    "build": "REACT_APP_API_SERVER='https://www.api.parthmakadiya.com/' react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "surge": "cd build && surge --domain convertio.parthmakadiya.com",
